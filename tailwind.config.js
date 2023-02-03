@@ -12,10 +12,9 @@ module.exports = {
         navbar: 'calc(100vh - 100%)',
       },
       colors: {
-        primary: '#a7ff83',
-        secondary: '#086972',
-        accent: '#17b978',
-        background: '#071a52',
+        "blue-50-op-700": 'rgba(239, 246, 255, 0.7)',
+        "blue-100-op-500": 'rgba(219, 234, 254, 0.5)',
+        "blue-500-op-500": 'rgba(59, 130, 246, 0.5)'
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", ...fontFamily.sans],
