@@ -1,18 +1,28 @@
-import './globals.css'
+'use client';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import { useState } from 'react';
+
+import '@/styles/globals.css'
+import montserrat from "@/fonts/montserrat";
+
+import NavBar from '@/components/app/NavBar';
+
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
+  const [allowScroll, setAllowScroll] = useState(true)
+
+  const toggleScroll = (): void => {
+    setAllowScroll((allowScroll) => allowScroll = !allowScroll);
+  }
+
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body className={(allowScroll ? 'overflow-y-auto' : 'overflow-y-hidden')}>
+        <div className={`${montserrat.variable} font-montserrat w-full h-fit antialiased flex flex-col lg:flex-row lg:items-start`}>
+          <NavBar toggleScroll={toggleScroll} />
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
