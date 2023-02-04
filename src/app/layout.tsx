@@ -18,7 +18,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     <html lang="en">
       <head />
       <body className={(allowScroll ? 'overflow-y-auto' : 'overflow-y-hidden')}>
-        <div className={`${montserrat.variable} font-montserrat w-full h-fit flex flex-col lg:flex-row lg:items-start`}>
+        <div className={`${montserrat.variable} font-montserrat w-full h-full flex flex-col lg:flex-row lg:items-start`}>
           <NavBar toggleScroll={toggleScroll} />
           {children}
         </div>
