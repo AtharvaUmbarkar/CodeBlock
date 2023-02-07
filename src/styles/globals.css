@@ -13,3 +13,11 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.code-block-bg {
+  background-image: url('../../public/backgrounds/code-block-background-colorless.png');
+  background-position: center;
+  background-size: contain;
+  /* mix-blend-mode: multiply; */
+  @apply bg-blue-600 bg-blend-multiply;
+}
