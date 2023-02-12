@@ -6,7 +6,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 
 import { MdCheck, MdErrorOutline, MdWarningAmber, MdInfoOutline } from 'react-icons/md';
-import { Tooltip } from 'react-daisyui';
 
 const RegisterFormSchema = z.object({
   firstName: z.string().min(1, { message: 'please enter a valid first name' }),
@@ -29,10 +28,9 @@ type RegisterFormInput = z.infer<typeof RegisterFormSchema>;
 
 const Register = () => {
 
-  const { register, reset, handleSubmit, formState: { errors, dirtyFields } } = useForm<RegisterFormInput>({ resolver: zodResolver(RegisterFormSchema), mode: 'onChange' });
+  const { register, reset, trigger, handleSubmit, formState: { errors, dirtyFields } } = useForm<RegisterFormInput>({ resolver: zodResolver(RegisterFormSchema), mode: 'onChange' });
 
   const onSubmit: SubmitHandler<RegisterFormInput> = (data) => {
-
     reset();
   }
 
@@ -53,7 +51,7 @@ const Register = () => {
                 {
                   dirtyFields.firstName ?
                     errors.firstName?.type ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.firstName?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />
@@ -78,7 +76,7 @@ const Register = () => {
                 {
                   dirtyFields.lastName ?
                     errors.lastName?.type ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.lastName?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />
@@ -103,7 +101,7 @@ const Register = () => {
                 {
                   dirtyFields.userName ?
                     errors.userName?.type ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.userName?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />
@@ -128,7 +126,7 @@ const Register = () => {
                 {
                   dirtyFields.email ?
                     errors.email?.message ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.email?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />
@@ -153,7 +151,7 @@ const Register = () => {
                 {
                   dirtyFields.password ?
                     errors.password?.type ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.password?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />
@@ -178,7 +176,7 @@ const Register = () => {
                 {
                   dirtyFields.confirmPassword ?
                     errors.confirmPassword?.message ?
-                      <div className='tooltip tooltip-bottom'
+                      <div className='daisy-tooltip daisy-tooltip-bottom'
                         data-tip={errors.confirmPassword?.message || ''}
                       >
                         <MdErrorOutline className='text-red-500 text-xl mx-1' />

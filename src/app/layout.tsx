@@ -1,28 +1,18 @@
-'use client';
+import AuthContext from '@/components/app/AuthContext';
+import Root from '@/components/app/Root';
+import { getServerSession } from 'next-auth';
+import { authOptions } from 'src/pages/api/auth/[...nextauth]';
 
-import { useState } from 'react';
-
-import '@/styles/globals.css'
-import montserrat from "@/fonts/montserrat";
-
-import NavBar from '@/components/app/NavBar';
-
-export default function RootLayout({ children, }: { children: React.ReactNode }) {
-  const [allowScroll, setAllowScroll] = useState(true)
-
-  const toggleScroll = (): void => {
-    setAllowScroll((allowScroll) => allowScroll = !allowScroll);
-  }
-
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const session = await getServerSession(authOptions);
   return (
     <html lang="en">
       <head />
-      <body className={(allowScroll ? 'overflow-y-auto' : 'overflow-y-hidden')}>
-        <div className={`${montserrat.variable} font-montserrat w-full min-h-full flex flex-col lg:flex-row lg:items-start text-black`}>
-          <NavBar toggleScroll={toggleScroll} />
+      <AuthContext session={session}>
+        <Root>
           {children}
-        </div>
-      </body>
+        </Root>
+      </AuthContext>
     </html>
   )
 }

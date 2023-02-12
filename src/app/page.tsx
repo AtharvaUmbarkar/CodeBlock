@@ -1,14 +1,18 @@
+'use client';
+
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
 
 import demoCode from '@/public/home/demo-code-2.png'
 import Link from 'next/link';
 
 const Home = () => {
+  const { data: session } = useSession();
   return (
-    <div className='grid place-items-center flex-grow lg:min-h-screen w-full code-block-bg'>
+    <div className='grid place-items-center flex-grow lg:min-h-screen code-block-bg'>
       <div className='flex flex-col flex-grow items-center w-3/4'>
-        <h1 className='text-4xl md:text-5xl lg:text-6xl text-white font-medium my-8 text-center'>Can&apos;t find some code you saved a while back?</h1>
-        <Image className='h-auto w-full md:w-3/4 lg:w-2/3' src={demoCode} alt='demo-code-image' placeholder='blur'/>
+        <h1 className='text-4xl md:text-5xl lg:text-6xl text-white font-medium my-8 text-center'>Can&apos;t find some code you saved a while back ?</h1>
+        <Image className='h-auto w-full md:w-3/4 lg:w-2/3' src={demoCode} alt='demo-code-image' placeholder='blur' />
         <section>
           <h1 className='font-medium my-8 text-white text-2xl text-center'>
             CodeBlock lets you
@@ -17,12 +21,14 @@ const Home = () => {
             <span className='text-code-green text-opacity-100 font-bold'> test </span>
             /
             <span className='text-code-yellow text-opacity-100 font-bold'> manage </span>
-            your indispensible code snippets, to allow easy access for coding and sharing purposes.
+            your indispensable code snippets, to allow easy access for coding and sharing purposes.
           </h1>
         </section>
         <div className='flex flex-row flex-wrap text-xl gap-2 items-center justify-center mb-8'>
-          <Link href={'/register'} className='my-1 py-1.5 px-3 w-36 rounded-sm text-center bg-blue-600 text-white border-2 border-solid border-blue-600 shadow-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 cursor-pointer'>Register</Link>
-          <Link href={'/login'} className='my-1 py-1.5 px-3 w-36 rounded-sm text-center bg-blue-600 text-white border-2 border-solid border-blue-600 shadow-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 cursor-pointer'>Login</Link>
+          {/* <Link href={'/register'} className='my-1 py-1.5 px-3 w-36 rounded-sm text-center bg-blue-600 text-white border-2 border-solid border-blue-600 shadow-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 cursor-pointer'>Register</Link> */}
+          {(!session) &&
+            <Link href={'/login'} className='my-1 py-1.5 px-1 w-52 md:w-60 normal-case text-lg daisy-btn transition-none animate-none bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-sm text-center'>Login to Get Started</Link>
+          }
         </div>
       </div>
     </div>
