@@ -10,8 +10,6 @@ import {
   MdMenu,
   MdClose,
   MdLogin,
-  MdAccountCircle,
-  MdPersonAdd,
   MdLogout,
   MdLibraryBooks,
   MdInfoOutline,
@@ -36,7 +34,7 @@ const NavBar = ({ toggleScroll }: NavProps) => {
   }
 
   return (
-    <div className='sticky top-0 w-full lg:w-max flex flex-row lg:flex-col bg-white'>
+    <div className='sticky top-0 w-full lg:w-max flex flex-row lg:flex-col bg-white z-50'>
       <header className='w-full flex flex-row items-center border-b border-solid border-blue-700 py-1.5 md:pb-2 lg:border-r lg:border-solid lg:border-blue-700'>
 
         <div className='self-stretch aspect-square my-1 mx-2 lg:hidden' onClick={toggleNav}>
@@ -56,7 +54,7 @@ const NavBar = ({ toggleScroll }: NavProps) => {
           <h1 className='w-fit text-3xl md:text-4xl'>Code<span className='text-blue-500'>Block</span></h1>
         </Link>
 
-        <nav className={(navOpen ? 'block' : 'hidden') + ' lg:block w-full absolute h-navbar backdrop-blur-sm top-full text-base lg:text-lg list-none'}>
+        <nav className={(navOpen ? 'flex' : 'hidden') + ' lg:flex flex-row w-full absolute h-navbar backdrop-blur-sm top-full text-base lg:text-lg list-none'}>
           <ul className='w-1/2 md:w-1/3 lg:w-full h-full flex flex-col bg-white divide-y-2 divide-blue-900 divide-opacity-10 overflow-y-auto border-r border-solid border-blue-700'>
             <li className='pt-0'>
               <Link
@@ -203,6 +201,7 @@ const NavBar = ({ toggleScroll }: NavProps) => {
               </li>
             }
           </ul>
+          <div onClick={() => toggleNav()} className='h-full flex-grow lg:hidden'></div>
         </nav>
 
       </header>

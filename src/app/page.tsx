@@ -27,7 +27,7 @@ const Home = () => {
         <div className='flex flex-row flex-wrap text-xl gap-2 items-center justify-center mb-8'>
           {/* <Link href={'/register'} className='my-1 py-1.5 px-3 w-36 rounded-sm text-center bg-blue-600 text-white border-2 border-solid border-blue-600 shadow-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 cursor-pointer'>Register</Link> */}
           {(!session) &&
-            <Link href={'/login'} className='my-1 py-1.5 px-1 w-52 md:w-60 normal-case text-lg daisy-btn transition-none animate-none bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-sm text-center'>Login to Get Started</Link>
+            <Link href={'/login'} className='my-1 py-4 px-1 w-52 md:w-60 text-xl bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-md text-center'>Login to Get Started</Link>
           }
         </div>
       </div>

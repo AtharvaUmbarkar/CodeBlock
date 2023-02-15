@@ -9,7 +9,7 @@ const LogoutButton = () => {
             <p className='text-center text-xl'>Are you sure you want to Logout?</p>
             <button
                 type='button'
-                className='daisy-btn animate-none transition-none bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-sm shadow mt-4'
+                className='uppercase px-4 py-2  bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-md shadow mt-6'
                 onClick={() => signOut({ callbackUrl: '/' })}
             >
                 Logout

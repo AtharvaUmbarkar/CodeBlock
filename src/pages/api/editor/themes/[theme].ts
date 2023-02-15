@@ -15,7 +15,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const themeFile = path.join(
     process.cwd(),
-    "public/editor-themes",
+    "public/editor/themes",
     theme as string
   );
   const response = await readTheme(themeFile).catch((e) => console.log(e));
