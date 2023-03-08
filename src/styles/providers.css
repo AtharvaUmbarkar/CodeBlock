@@ -1,11 +1,11 @@
 .google {
     background-color: white;
     color: black;
-    @apply border-slate-300;
+    @apply tw-border-slate-300;
 }
 
 .github {
     background-color: black;
     color: white;
-    @apply border-black;
+    @apply tw-border-black;
 }

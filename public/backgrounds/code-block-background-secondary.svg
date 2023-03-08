@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1357.83 1203.67">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #bdc6ef;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: #ced6f3;
+        mix-blend-mode: multiply;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-7 {
+        fill: #eff1fb;
+      }
+
+      .cls-3 {
+        stroke: #adb7eb;
+      }
+
+      .cls-8 {
+        fill: #dee2f7;
+      }
+
+      .cls-9 {
+        fill: #ced5f3;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="157.83" y="182.15" width="1200" height="800"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <g id="Graphic_elements" data-name="Graphic elements">
+      <g class="cls-6">
+        <g>
+          <path class="cls-9" d="m328.58,1020.1l-145.35-145.35c-4.4-4.4-4.4-11.53,0-15.93l145.35-145.35c4.4-4.4,11.53-4.4,15.93,0l145.35,145.35c4.4,4.4,4.4,11.53,0,15.93l-145.35,145.35c-4.4,4.4-11.53,4.4-15.93,0Z"/>
+          <rect class="cls-1" x="397.6" y="927.84" width="228.09" height="228.09" transform="translate(886.58 -56.63) rotate(45)"/>
+          <path class="cls-7" d="m328.69,309.94l-145.35-145.35c-4.4-4.4-4.4-11.53,0-15.93L328.69,3.3c4.4-4.4,11.53-4.4,15.93,0l145.35,145.35c4.4,4.4,4.4,11.53,0,15.93l-145.35,145.35c-4.4,4.4-11.53,4.4-15.93,0Z"/>
+          <rect class="cls-8" x="42.57" y="222.61" width="228.09" height="228.09" rx="11.27" ry="11.27" transform="translate(283.93 -12.14) rotate(45)"/>
+          <rect class="cls-3" x="400.12" y="220.09" width="228.09" height="228.09" transform="translate(386.87 -265.71) rotate(45)"/>
+          <rect class="cls-8" x="577.64" y="397.6" width="228.09" height="228.09" rx="11.27" ry="11.27" transform="translate(564.38 -339.24) rotate(45)"/>
+          <path class="cls-5" d="m151.07,842.59L5.72,697.24c-4.4-4.4-4.4-11.53,0-15.93l320.45-320.45c4.4-4.4,11.53-4.4,15.93,0l145.35,145.35c4.4,4.4,4.4,11.53,0,15.93l-320.45,320.45c-4.4,4.4-11.53,4.4-15.93,0Z"/>
+          <path class="cls-7" d="m503.68,845.01l-145.35-145.35c-4.4-4.4-4.4-11.53,0-15.93l145.35-145.35c4.4-4.4,11.53-4.4,15.93,0l145.35,145.35c4.4,4.4,4.4,11.53,0,15.93l-145.35,145.35c-4.4,4.4-11.53,4.4-15.93,0Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

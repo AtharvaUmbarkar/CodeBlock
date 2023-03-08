@@ -10,12 +10,12 @@ const Logout = async () => {
   await checkSession();
 
   return (
-    <div className='grid justify-items-center content-start flex-grow lg:min-h-screen w-full code-block-bg'>
-      <div className="w-[90%] md:w-4/5 lg:w-1/2 flex flex-col items-center">
-        <div className="text-center p-1 mt-6 mb-4">
-          <h1 className="text-5xl text-white font-bold">Logout from CodeBlock</h1>
+    <div className='tw-grid tw-justify-items-center tw-content-start tw-flex-grow lg:tw-min-h-screen tw-w-full code-block-bg'>
+      <div className="tw-w-[90%] md:tw-w-4/5 lg:tw-w-1/2 tw-flex tw-flex-col tw-items-center">
+        <div className="tw-text-center tw-p-1 tw-mt-6 tw-mb-4">
+          <h1 className="tw-text-5xl tw-text-white tw-font-bold">Logout from CodeBlock</h1>
         </div>
-        <div className="grid place-items-center w-full max-w-lg px-1 py-4 lg:py-8 my-4 shadow-2xl text-black bg-gray-100 font-medium rounded-md">
+        <div className="tw-grid tw-place-items-center tw-w-full tw-max-w-lg tw-px-1 tw-py-4 lg:tw-py-8 tw-my-4 tw-shadow-2xl tw-text-black tw-bg-gray-100 tw-font-medium tw-rounded-md">
           <LogoutButton />
         </div>
       </div>

@@ -4,30 +4,38 @@ import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 
 import demoCode from '@/public/home/demo-code-2.png'
+
+import Chip from '@mui/material/Chip';
 import Link from 'next/link';
+import Button from '@mui/material/Button';
 
 const Home = () => {
   const { data: session } = useSession();
   return (
-    <div className='grid place-items-center flex-grow lg:min-h-screen code-block-bg'>
-      <div className='flex flex-col flex-grow items-center w-3/4'>
-        <h1 className='text-4xl md:text-5xl lg:text-6xl text-white font-medium my-8 text-center'>Can&apos;t find some code you saved a while back ?</h1>
-        <Image className='h-auto w-full md:w-3/4 lg:w-2/3' src={demoCode} alt='demo-code-image' placeholder='blur' />
+    <div className='tw-grid tw-place-items-center tw-place-content-start tw-flex-grow lg:tw-min-h-screen code-block-bg'>
+      <div className='tw-flex tw-flex-col tw-flex-grow tw-items-center tw-w-3/4'>
+        <h1 className='tw-text-4xl md:tw-text-5xl lg:tw-text-6xl tw-text-black-main tw-font-bold tw-my-8 lg:tw-my-12 tw-text-center'>Can&apos;t find some code you saved a while back ?</h1>
+        <Image className='tw-h-auto tw-w-full md:tw-w-3/4 lg:tw-w-2/3' src={demoCode} alt='demo-code-image' placeholder='blur' />
         <section>
-          <h1 className='font-medium my-8 text-white text-2xl text-center'>
+          <h1 className='tw-font-semibold tw-my-8 lg:tw-my-12 tw-text-black-light tw-text-2xl lg:tw-text-3xl tw-text-center'>
             CodeBlock lets you
-            <span className='text-code-pink text-opacity-100 font-bold'> create </span>
+            <Chip label='create' variant='outlined' sx={{ color: 'black.light', backgroundColor: 'white.main', fontSize: { xs: 20, lg: 24 }, padding: 0.5, marginInline: 1 }} />
+            {/* <span className='text-primary-main text-opacity-100 font-bold'> create </span> */}
             /
-            <span className='text-code-green text-opacity-100 font-bold'> test </span>
+            <Chip label='edit' variant='outlined' sx={{ color: 'black.light', backgroundColor: 'white.main', fontSize: { xs: 20, lg: 24 }, padding: 0.5, marginInline: 1 }} />
+            {/* <span className='text-primary-main text-opacity-100 font-bold'> test </span> */}
             /
-            <span className='text-code-yellow text-opacity-100 font-bold'> manage </span>
+            <Chip label='manage' variant='outlined' sx={{ color: 'black.light', backgroundColor: 'white.main', fontSize: { xs: 20, lg: 24 }, padding: 0.5, marginInline: 1 }} />
+            {/* <span className='text-primary-main text-opacity-100 font-bold'> manage </span> */}
             your indispensable code snippets, to allow easy access for coding and sharing purposes.
           </h1>
         </section>
-        <div className='flex flex-row flex-wrap text-xl gap-2 items-center justify-center mb-8'>
-          {/* <Link href={'/register'} className='my-1 py-1.5 px-3 w-36 rounded-sm text-center bg-blue-600 text-white border-2 border-solid border-blue-600 shadow-lg hover:bg-white hover:text-blue-600 hover:border-blue-600 cursor-pointer'>Register</Link> */}
+        <div className='tw-flex tw-flex-row tw-flex-wrap tw-text-xl tw-gap-2 tw-items-center tw-justify-center tw-mb-8'>
           {(!session) &&
-            <Link href={'/login'} className='my-1 py-4 px-1 w-52 md:w-60 text-xl bg-blue-600 text-white border-blue-600 hover:bg-blue-500 hover:border-blue-500 rounded-md text-center'>Login to Get Started</Link>
+            <Link href={'/login'}>
+              <Button variant='contained' color='primary' sx={{ paddingBlock: 1, paddingInline: 2, fontSize: 16 }}>Login to Get Started</Button>
+            </Link>
+            // <Link href={'/login'} className='my-1 py-4 px-1 w-52 md:w-60 text-xl bg-primary-main text-black-main font-semibold hover:bg-primary-dark rounded-md text-center'>Login to Get Started</Link>
           }
         </div>
       </div>

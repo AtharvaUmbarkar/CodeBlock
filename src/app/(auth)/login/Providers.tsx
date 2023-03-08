@@ -12,16 +12,16 @@ interface ProvidersProps {
 
 const Providers = ({ providers }: ProvidersProps) => {
   return (
-    <div className='flex flex-col lg:w-60'>
+    <div className='tw-flextw-flex-col lg:tw-w-60'>
       {(providers).map((provider, i) => (
-        <div key={provider.name} className='w-full'>
+        <div key={provider.name} className='tw-w-full'>
           <button
             type='button'
-            className={`${provider.id} w-full flex flex-row items-center rounded-sm my-0.5 h-12 text-base border-2 border-solid`}
+            className={`${provider.id} tw-w-full tw-flex tw-flex-row tw-items-center tw-rounded-sm tw-my-0.5 tw-h-12 tw-text-base tw-border-2 tw-border-solid`}
             onClick={() => signIn(provider.id, { callbackUrl: '/' })}
           >
-            <Image className='ml-3' height={24} width={24} src={`./providers/${provider.id}.svg`} alt={`${provider.name} logo not found`} />
-            <div className='flex-grow text-center px-4'>Sign in with{' '} {provider.name}</div>
+            <Image className='tw-ml-3' height={24} width={24} src={`./providers/${provider.id}.svg`} alt={`${provider.name} logo not found`} />
+            <div className='tw-flex-grow tw-text-center tw-px-4'>Sign in with{' '} {provider.name}</div>
           </button>
         </div>
       ))}
