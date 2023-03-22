@@ -1,16 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
+
+import '@/styles/base.css'
 import '@/styles/globals.css'
 
 const Error404 = () => {
   return (
-    <div className='grid place-items-center bg-white h-[100vh] w-[100vw]'>
-      <div className='flex flex-col items-center'>
-        <div className='flex flex-row items-center my-8'>
-          <h1 className='text-primary font-bold px-2 text-3xl text-center md:text-4xl lg:text-5xl border-r-2 border-solid border-blue-300'>404</h1>
-          <div className='text-black text-3xl text-center md:text-4xl lg:text-5xl mx-4'>Page Not Found</div>
+    <div className='tw-grid tw-place-items-center tw-bg-white tw-h-[100vh] tw-w-[100vw]'>
+      <div className='tw-flex tw-flex-col tw-items-center'>
+        <div className='tw-flex tw-flex-row tw-items-center tw-mb-12'>
+          <h1 className='tw-text-primary-main tw-font-bold tw-px-2 tw-text-4xl tw-text-center lg:tw-text-5xl tw-border-r-2 tw-border-solid tw-border-primary-light'>404</h1>
+          <div className='tw-text-black tw-text-4xl tw-text-center lg:tw-text-5xl tw-mx-4'>Page Not Found</div>
         </div>
-        <Link href={'/'} className='p-3 lg:p-4 rounded-md focus:scale-95 uppercase bg-secondary border-none hover:bg-primary text-white'>Return to Home</Link>
+        <Link href={'/'} className='tw-p-3 tw-text-sm lg:tw-text-base tw-rounded-md focus:tw-scale-95 tw-uppercase tw-bg-primary-main tw-border-none hover:tw-bg-primary-dark tw-text-white'>Return to Home</Link>
       </div>
     </div>
   )

@@ -12,18 +12,19 @@ const CodeBlockComponents: Components<Omit<Theme, "components">> = {
       }),
     },
   },
-  MuiToolbar: {
-    defaultProps: {},
-    styleOverrides: {
-      root: {
-        backgroundColor: "white.main",
-        accentColor: "white.main",
-      },
+  MuiButton: {
+    defaultProps: {
+      disableTouchRipple: true,
     },
   },
   MuiUseMediaQuery: {
     defaultProps: {
       noSsr: true,
+    },
+  },
+  MuiCheckbox: {
+    defaultProps: {
+      disableRipple: true,
     },
   },
 };

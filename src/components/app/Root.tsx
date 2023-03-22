@@ -3,10 +3,12 @@
 import React, { useState } from 'react'
 
 import montserrat from "@/fonts/montserrat";
+
 import NavBar from '@/components/app/NavBar';
+import NavDrawer from './NavDrawer';
 
 import { QueryClient, QueryClientProvider } from 'react-query';
-import NavDrawer from './NavDrawer';
+import SnackbarState from 'src/context/SnackbarState';
 
 const queryClient = new QueryClient();
 
@@ -33,14 +35,16 @@ const Root = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-        <body className={(allowScroll ? 'tw-overflow-y-auto' : 'tw-overflow-y-hidden')}>
-          <div id='next-root' className={`${montserrat.variable} tw-font-montserrat tw-min-h-full tw-flex tw-flex-col`}>
+      <body className={(allowScroll ? 'tw-overflow-y-auto' : 'tw-overflow-y-hidden')}>
+        <SnackbarState>
+          <div id='next-root' className={`${montserrat.variable} tw-font-montserrat tw-min-h-full tw-w-full tw-flex tw-flex-col`}>
             <NavBar toggleNav={toggleNav} />
             <NavDrawer navOpen={navOpen} closeNav={closeNav}>
               {children}
             </NavDrawer>
           </div>
-        </body>
+        </SnackbarState>
+      </body>
     </QueryClientProvider>
   )
 }

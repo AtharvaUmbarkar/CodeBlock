@@ -31,7 +31,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
   const { data: session } = useSession();
 
   return (
-    <Box display={'flex'} flexGrow={1}>
+    <Box display={'flex'} flexGrow={1} >
       <Drawer
         variant={'permanent'}
         anchor={'left'}
@@ -46,7 +46,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                   <ListItemIcon sx={{ minWidth: 35 }}>
                     <Home sx={{ color: !path.length ? 'black.dark' : 'grey.dark' }} />
                   </ListItemIcon>
-                  <ListItemText sx={{ color: !path.length ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: !path.length ? 600 : 500 }}>Home</ListItemText>
+                  <ListItemText sx={{ color: !path.length ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: !path.length ? 600 : 400 }}>Home</ListItemText>
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -59,7 +59,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Login sx={{ color: path[0] == 'login' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'login' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'login' ? 600 : 500 }}>Login</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'login' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'login' ? 600 : 400 }}>Login</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -74,7 +74,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Dashboard sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'dashboard' ? 600 : 500 }}>Dashboard</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'dashboard' ? 600 : 400 }}>Dashboard</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -89,7 +89,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <LibraryBooks sx={{ color: path[0] == 'collection' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'collection' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'collection' ? 600 : 500 }}>Collection</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'collection' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'collection' ? 600 : 400 }}>Collection</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -102,7 +102,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                   <ListItemIcon sx={{ minWidth: 35 }}>
                     <InfoOutlined sx={{ color: path[0] == 'about' ? 'black.dark' : 'grey.dark' }} />
                   </ListItemIcon>
-                  <ListItemText sx={{ color: path[0] == 'about' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'about' ? 600 : 500 }}>About</ListItemText>
+                  <ListItemText sx={{ color: path[0] == 'about' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'about' ? 600 : 400 }}>About</ListItemText>
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -118,7 +118,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Logout sx={{ color: path[0] == 'logout' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'logout' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'logout' ? 600 : 500 }}>Logout</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'logout' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'logout' ? 600 : 400 }}>Logout</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -144,7 +144,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                   <ListItemIcon sx={{ minWidth: 35 }}>
                     <Home sx={{ color: !path.length ? 'black.dark' : 'grey.dark' }} />
                   </ListItemIcon>
-                  <ListItemText sx={{ color: !path.length ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: !path.length ? 600 : 500 }}>Home</ListItemText>
+                  <ListItemText sx={{ color: !path.length ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: !path.length ? 600 : 400 }}>Home</ListItemText>
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -157,7 +157,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Login sx={{ color: path[0] == 'login' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'login' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'login' ? 600 : 500 }}>Login</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'login' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'login' ? 600 : 400 }}>Login</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -172,7 +172,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Dashboard sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'dashboard' ? 600 : 500 }}>Dashboard</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'dashboard' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'dashboard' ? 600 : 400 }}>Dashboard</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -187,7 +187,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <LibraryBooks sx={{ color: path[0] == 'collection' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'collection' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'collection' ? 600 : 500 }}>Collection</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'collection' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'collection' ? 600 : 400 }}>Collection</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>
@@ -200,7 +200,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                   <ListItemIcon sx={{ minWidth: 35 }}>
                     <InfoOutlined sx={{ color: path[0] == 'about' ? 'black.dark' : 'grey.dark' }} />
                   </ListItemIcon>
-                  <ListItemText sx={{ color: path[0] == 'about' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'about' ? 600 : 500 }}>About</ListItemText>
+                  <ListItemText sx={{ color: path[0] == 'about' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'about' ? 600 : 400 }}>About</ListItemText>
                 </ListItemButton>
               </Link>
             </ListItem>
@@ -216,7 +216,7 @@ const NavDrawer = ({ children, navOpen, closeNav }: { children: React.ReactNode,
                       <ListItemIcon sx={{ minWidth: 35 }}>
                         <Logout sx={{ color: path[0] == 'logout' ? 'black.dark' : 'grey.dark' }} />
                       </ListItemIcon>
-                      <ListItemText sx={{ color: path[0] == 'logout' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'logout' ? 600 : 500 }}>Logout</ListItemText>
+                      <ListItemText sx={{ color: path[0] == 'logout' ? 'black.dark' : 'black.light' }} primaryTypographyProps={{ fontWeight: path[0] == 'logout' ? 600 : 400 }}>Logout</ListItemText>
                     </ListItemButton>
                   </Link>
                 </ListItem>

@@ -1,0 +1,81 @@
+const data = [
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing titmazing titmazing titmazing titmazing title',
+    description: 'An amazing descripom',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorelorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorelorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorelorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorelorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorelorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+  {
+    title: 'An amazing title',
+    description: 'An amazing description lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+    language: 'javascript',
+    lastModified: '21-03-2023',
+    favourite: false,
+  },
+]
+
+export default data
