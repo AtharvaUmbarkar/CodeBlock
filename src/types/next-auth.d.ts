@@ -11,7 +11,16 @@ declare module "next-auth" {
       email: string;
       image: string;
       id: string;
-    },
+      provider: string;
+    };
     sessionToken: string;
+  }
+
+  interface User {
+    id: string;
+    name: string;
+    email: string;
+    image: string;
+    emailVerified: boolean | null,
   }
 }

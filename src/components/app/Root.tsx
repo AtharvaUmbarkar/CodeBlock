@@ -7,7 +7,7 @@ import montserrat from "@/fonts/montserrat";
 import NavBar from '@/components/app/NavBar';
 import NavDrawer from './NavDrawer';
 
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import SnackbarState from 'src/context/SnackbarState';
 
 const queryClient = new QueryClient();

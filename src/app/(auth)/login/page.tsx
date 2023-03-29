@@ -5,7 +5,6 @@ import { getServerSession } from "next-auth/next"
 import { authOptions } from "../../../pages/api/auth/[...nextauth]";
 import Providers from './Providers';
 import { redirect } from 'next/navigation'
-import { Session } from 'next-auth';
 
 const Login = async () => {
   await checkSession();
@@ -36,6 +35,6 @@ async function fetchProviders() {
 async function checkSession() {
   const session = await getServerSession(authOptions);
   if (session) {
-    redirect('/');
+    redirect('/dashboard');
   }
 }

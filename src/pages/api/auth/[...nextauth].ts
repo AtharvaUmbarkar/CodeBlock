@@ -10,10 +10,14 @@ export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
+      id: "google",
+      name: "Google",
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
     }),
     GithubProvider({
+      id: "github",
+      name: "Github",
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
@@ -26,8 +30,38 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     async session({ session, user }) {
+      let response: any = await fetch(
+        process.env.ROOT_URL + "/api/auth/get-current-provider",
+        {
+          method: "POST",
+          body: JSON.stringify({ id: user.id }),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      response = await response.json();
+
       session.user.id = user.id;
+      session.user.provider = response.provider;
       return session;
+    },
+    async signIn({ account, user }) {
+      let response: any = await fetch(
+        process.env.ROOT_URL + "/api/user/create-user",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            authID: user.id,
+            name: user.name,
+            email: user.email,
+            profilePictureLink: user.image,
+            provider: account?.provider,
+            providerAccountID: account?.providerAccountId,
+          }),
+        }
+      );
+      response = await response.json();
+      return user ? true : false;
     },
   },
   theme: {

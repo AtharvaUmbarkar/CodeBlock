@@ -18,7 +18,7 @@ const Providers = ({ providers }: ProvidersProps) => {
           <button
             type='button'
             className={`${provider.id} tw-w-full tw-flex tw-flex-row tw-items-center tw-rounded-sm tw-my-0.5 tw-h-12 tw-text-base tw-border-2 tw-border-solid`}
-            onClick={() => signIn(provider.id, { callbackUrl: '/' })}
+            onClick={() => signIn(provider.id, { callbackUrl: '/dashboard' })}
           >
             <Image className='tw-ml-3' height={24} width={24} src={`./providers/${provider.id}.svg`} alt={`${provider.name} logo not found`} />
             <div className='tw-flex-grow tw-text-center tw-px-4'>Sign in with{' '} {provider.name}</div>

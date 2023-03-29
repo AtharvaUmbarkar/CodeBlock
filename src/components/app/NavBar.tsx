@@ -19,6 +19,7 @@ interface NavProps {
 
 const NavBar = ({ toggleNav }: NavProps) => {
   const { data: session } = useSession();
+  // console.log(session);
 
   return (
     <AppBar position="sticky">

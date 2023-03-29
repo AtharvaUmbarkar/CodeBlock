@@ -71,7 +71,7 @@ const Collection = () => {
             open={sortOpen}
             onClose={handleCloseSort}
             MenuListProps={{
-              'aria-labelledby': 'basic-button',
+              'aria-labelledby': 'sort-button',
             }}
           >
             {sortOptions.map((option, i) => {
