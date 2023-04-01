@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userDetails),
     });
-    
+
     response = await response.json();
 
     res.status(200).json(response);
@@ -18,6 +18,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(400).send(error);
     return;
   }
+};
+
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: "4mb",
+    },
+  },
 };
 
 export default handler;

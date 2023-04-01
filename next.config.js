@@ -16,7 +16,7 @@ const nextConfig = {
     "@mui/lab": {
       transform: "@mui/lab/{{member}}",
     },
-    "mongoose": {
+    mongoose: {
       transform: "@mui/lab/{{member}}",
     },
     "@mui/icons-material/?(((\\w*)?/?)*)": {
